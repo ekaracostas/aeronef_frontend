@@ -3,7 +3,12 @@ module.exports = {
       "./src/**/*.{html,js,jsx,ts,tsx}",
     ],
     theme: {
-      extend: {},
+      extend: {
+        fontFamily: {
+          sans: ['var(--font-inter)'],
+          title: ['var(--font-montserrat)'],
+        },
+      },
     },
     plugins: [],
   }

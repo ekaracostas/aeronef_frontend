@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 export default function Header() {
   return (
-  <header className="bg-pink-500">
-    <h1 className="text-3xl font-bold">AERONEF</h1>
+  <header className="bg-pink-500 flex justify-between items-center">
+    <h1 className="text-8xl pl-45 py-14">AERONEF</h1>
     <div >
       <Link href="/">ACCUEIL</Link>
       <Link href="/materiel">MATÉRIEL</Link>
