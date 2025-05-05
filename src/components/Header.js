@@ -5,7 +5,7 @@ export default function Header() {
   return (
   <header className="bg-pink-500 flex justify-between items-center">
     <h1 className="text-8xl pl-45 py-14">AERONEF</h1>
-    <div >
+    <div className="flex p-5 gap-10 text-2xl">
       <Link href="/">ACCUEIL</Link>
       <Link href="/materiel">MATÉRIEL</Link>
       <Link href="/espace">ESPACE</Link>
