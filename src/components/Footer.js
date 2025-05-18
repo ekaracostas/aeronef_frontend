@@ -7,8 +7,9 @@ export default function Footer() {
 			<div>
 				<Link href="https://www.instagram.com/studioaeronef/">LOGO INSTAGRAM</Link>
 				<Link href="https://www.facebook.com/people/Studio-A%C3%A9ronef/100024839083196/">LOGO FACEBOOK</Link>
-				<Link href ="https://soundcloud.com/">LOGO SOUNDCLOUD</Link>
-				<Link href ="https://www.youtube.com/">LOGO YOUTUBE</Link>
+				<Link href="https://soundcloud.com/antoinekaracostas/sets/aeronef/s-nFPAw?si=66036f3ada0b4b6a97cd9a2fbd8a64d3/">LOGO SOUNDCLOUD</Link>
+				<Link href="https://www.youtube.com/">LOGO YOUTUBE</Link>
+				<Link href="https://linktr.ee/studioaeronef/">LINKTREE</Link>
 			</div>
 		</footer>
 	);

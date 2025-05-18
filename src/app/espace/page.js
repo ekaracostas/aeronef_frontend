@@ -7,7 +7,6 @@ export default function EspacePage() {
 	return (
 		<div>
 			<Header />
-			<h2>Espace</h2>
       <h2>4 cabines isolées de prise de son en lumière du jour (les cabines du bas sont reliées en visioconférence avec celles du haut), une cabine régie</h2>
       <h2>Rez-de-chaussée : régie : 16m²</h2>
       <Image src="/images/Aéronef - régie.jpg" alt="Photo de la régie" width={300} height={200} className="object-cover rounded shadow" />
