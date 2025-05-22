@@ -3,13 +3,16 @@ import Link from "next/link";
 
 export default function Footer() {
 	return (
-		<footer className="bg-pink-500 flex justify-around items-center">
-			<div>
-				<Link href="https://www.instagram.com/studioaeronef/">LOGO INSTAGRAM</Link>
-				<Link href="https://www.facebook.com/people/Studio-A%C3%A9ronef/100024839083196/">LOGO FACEBOOK</Link>
-				<Link href="https://soundcloud.com/antoinekaracostas/sets/aeronef/s-nFPAw?si=66036f3ada0b4b6a97cd9a2fbd8a64d3/">LOGO SOUNDCLOUD</Link>
-				<Link href="https://www.youtube.com/">LOGO YOUTUBE</Link>
-				<Link href="https://linktr.ee/studioaeronef/">LINKTREE</Link>
+		<footer className="bg-gray-100 border-t border-gray-200 py-6 mt-12">
+			<div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+				<p className="text-sm text-gray-600">&copy; {new Date().getFullYear()} Studio Aéronef. Tous droits réservés.</p>
+				<div className="flex gap-6 text-gray-700 text-sm font-medium">
+					<Link href="https://www.instagram.com/studioaeronef/" className="hover:text-black transition-colors">Instagram</Link>
+					<Link href="https://www.facebook.com/people/Studio-A%C3%A9ronef/100024839083196/" className="hover:text-black transition-colors">Facebook</Link>
+					<Link href="https://soundcloud.com/antoinekaracostas/sets/aeronef/s-nFPAw?si=66036f3ada0b4b6a97cd9a2fbd8a64d3/" className="hover:text-black transition-colors">SoundCloud</Link>
+					<Link href="https://www.youtube.com/" className="hover:text-black transition-colors">YouTube</Link>
+					<Link href="https://linktr.ee/studioaeronef/" className="hover:text-black transition-colors">Linktree</Link>
+				</div>
 			</div>
 		</footer>
 	);

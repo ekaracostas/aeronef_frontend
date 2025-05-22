@@ -3,19 +3,27 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 export default function ContactPage() {
-	return (
-		<div>
-			<Header />
-			<h2>Journée d&apos;enregistrement ou de mixage à partir de 450e H.T. N&apos;hésitez pas à nous contacter pour un devis plus précis, adapté à vos besoins.</h2>
-      <h2>Studio Aéronef</h2>
-      <h2>15 rue Pixérécourt</h2>
-      <h2>75020 Paris</h2>
-      <h2>métro : Place des Fêtes, Jourdain ou Gambetta</h2>
-      <h2>bus: 26 ou 96, arrêt Pyrénées/Ménilmontant</h2>
-      <h2>Patrick Chenais 06 79 66 46 30</h2>
-      <h2>studioaeronef@gmail.com</h2>
-      {/* insérer une carte google maps ici */}
-			<Footer />
-		</div>
-	);
+  return (
+    <div className="bg-white text-gray-800 font-sans min-h-screen flex flex-col">
+      <Header />
+      <main className="flex-grow max-w-3xl mx-auto px-6 py-12 space-y-6 text-center">
+        <h2 className="text-lg md:text-xl font-medium">
+          Journée d&apos;enregistrement ou de mixage à partir de 450€ H.T. N&apos;hésitez pas à nous contacter pour un devis plus précis, adapté à vos besoins.
+        </h2>
+
+        <div className="space-y-2 text-gray-700">
+          <h2 className="text-xl font-semibold">Studio Aéronef</h2>
+          <p>15 rue Pixérécourt</p>
+          <p>75020 Paris</p>
+          <p>métro : Place des Fêtes, Jourdain ou Gambetta</p>
+          <p>bus : 26 ou 96, arrêt Pyrénées/Ménilmontant</p>
+          <p className="font-semibold">Patrick Chenais 06 79 66 46 30</p>
+          <p className="underline">studioaeronef@gmail.com</p>
+        </div>
+
+        {/* Ici tu pourras insérer ta carte Google Maps */}
+      </main>
+      <Footer />
+    </div>
+  );
 }

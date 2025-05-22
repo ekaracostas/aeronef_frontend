@@ -5,18 +5,68 @@ import Image from "next/image";
 
 export default function EspacePage() {
 	return (
-		<div>
+		<div className="bg-white text-gray-800 font-sans min-h-screen flex flex-col">
 			<Header />
-      <h2>4 cabines isolées de prise de son en lumière du jour (les cabines du bas sont reliées en visioconférence avec celles du haut), une cabine régie</h2>
-      <h2>Rez-de-chaussée : régie : 16m²</h2>
-      <Image src="/images/Aéronef - régie.jpg" alt="Photo de la régie" width={300} height={200} className="object-cover rounded shadow" />
-      <h2>Cabine A : 16m²</h2>
-      <Image src="/images/Aeronef piano.jpg" alt="Photo de la cabine A" width={300} height={200} className="object-cover rounded shadow" />
-			<h2>Cabine B : 9m²</h2>
-      <Image src="/images/Aéronef - drums.jpg" alt="Photo de la cabine B" width={300} height={200} className="object-cover rounded shadow" />
-      <h2>1er étage : cabine C : 28m²</h2>
-      <Image src="/images/Aéronef - haut.jpg" alt="Photo de la cabine C" width={300} height={200} className="object-cover rounded shadow" />
-      <Footer />
+			<main className="flex-grow max-w-4xl mx-auto px-6 py-12 space-y-10">
+				<section className="space-y-4 text-center">
+					<h2 className="text-2xl font-semibold">
+						4 cabines isolées de prise de son en lumière du jour (les cabines du bas sont reliées en visioconférence avec celles du haut), une cabine régie
+					</h2>
+				</section>
+
+				<section className="space-y-6">
+					<h2 className="text-xl font-semibold">Rez-de-chaussée : régie : 16m²</h2>
+					<div className="w-full max-w-md mx-auto">
+						<Image
+							src="/images/Aéronef - régie.jpg"
+							alt="Photo de la régie"
+							width={300}
+							height={200}
+							className="object-cover rounded-lg shadow-lg"
+						/>
+					</div>
+				</section>
+
+				<section className="space-y-6">
+					<h2 className="text-xl font-semibold">Cabine A : 16m²</h2>
+					<div className="w-full max-w-md mx-auto">
+						<Image
+							src="/images/Aeronef piano.jpg"
+							alt="Photo de la cabine A"
+							width={300}
+							height={200}
+							className="object-cover rounded-lg shadow-lg"
+						/>
+					</div>
+				</section>
+
+				<section className="space-y-6">
+					<h2 className="text-xl font-semibold">Cabine B : 9m²</h2>
+					<div className="w-full max-w-md mx-auto">
+						<Image
+							src="/images/Aéronef - drums.jpg"
+							alt="Photo de la cabine B"
+							width={300}
+							height={200}
+							className="object-cover rounded-lg shadow-lg"
+						/>
+					</div>
+				</section>
+
+				<section className="space-y-6">
+					<h2 className="text-xl font-semibold">1er étage : cabine C : 28m²</h2>
+					<div className="w-full max-w-md mx-auto">
+						<Image
+							src="/images/Aéronef - haut.jpg"
+							alt="Photo de la cabine C"
+							width={300}
+							height={200}
+							className="object-cover rounded-lg shadow-lg"
+						/>
+					</div>
+				</section>
+			</main>
+			<Footer />
 		</div>
 	);
 }
