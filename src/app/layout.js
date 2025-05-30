@@ -1,8 +1,7 @@
 import './globals.css'
-import { Inter, Montserrat } from 'next/font/google'
+import { Roboto } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
-const montserrat = Montserrat({ subsets: ['latin'], weight: '800', variable: '--font-montserrat' });
+const roboto = Roboto({ subsets: ['latin'], variable: '--font-roboto' });
 
 export const metadata = {
   title: 'Studio Aeronef',
@@ -14,7 +13,7 @@ export const viewport = 'width=device-width, initial-scale=1';
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="fr" className={`${inter.variable} ${montserrat.variable}`}>
+    <html lang="fr" className={`${roboto.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
