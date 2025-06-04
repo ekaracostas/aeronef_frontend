@@ -1,5 +1,0 @@
-
-REFERENCES :
-
-passer la souris et avoir les infos que chacune
-au clic sur chacune, lien vers le site de l'artiste
