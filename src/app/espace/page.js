@@ -14,29 +14,29 @@ export default function EspacePage() {
 
 				<section className="space-y-6">
 					<h2 className="text-xl font-semibold">Rez-de-chaussée : régie : 16m²</h2>
-					<div className="w-full max-w-md mx-auto">
-						<Image src="/images/Aéronef - régie.jpg" alt="Photo de la régie" width={800} height={500} className="object-cover rounded-lg shadow-lg" />
+					<div className="w-full max-w-md md:max-w-4xl mx-auto">
+						<Image src="/images/Aéronef - régie.jpg" alt="Photo de la régie" width={800} height={500} className="w-full h-auto object-cover rounded-lg shadow-lg" />
 					</div>
 				</section>
 
 				<section className="space-y-6">
 					<h2 className="text-xl font-semibold">Cabine A : 16m²</h2>
-					<div className="w-full max-w-md mx-auto">
-						<Image src="/images/Aeronef piano.jpg" alt="Photo de la cabine A" width={800} height={500} className="object-cover rounded-lg shadow-lg" />
+					<div className="w-full max-w-md md:max-w-4xl mx-auto">
+						<Image src="/images/Aeronef piano.jpg" alt="Photo de la cabine A" width={800} height={500} className="w-full h-auto object-cover rounded-lg shadow-lg" />
 					</div>
 				</section>
 
 				<section className="space-y-6">
 					<h2 className="text-xl font-semibold">Cabine B : 9m²</h2>
-					<div className="w-full max-w-md mx-auto">
-						<Image src="/images/Aéronef - drums.jpg" alt="Photo de la cabine B" width={800} height={500} className="object-cover rounded-lg shadow-lg" />
+					<div className="w-full max-w-md md:max-w-4xl mx-auto">
+						<Image src="/images/Aéronef - drums.jpg" alt="Photo de la cabine B" width={800} height={500} className="w-full h-auto object-cover rounded-lg shadow-lg" />
 					</div>
 				</section>
 
 				<section className="space-y-6">
 					<h2 className="text-xl font-semibold">1er étage : cabine C : 28m²</h2>
-					<div className="w-full max-w-md mx-auto">
-						<Image src="/images/Aéronef - haut.jpg" alt="Photo de la cabine C" width={800} height={500} className="object-cover rounded-lg shadow-lg" />
+					<div className="w-full max-w-md md:max-w-4xl mx-auto">
+						<Image src="/images/Aéronef - haut.jpg" alt="Photo de la cabine C" width={800} height={500} className="w-full h-auto object-cover rounded-lg shadow-lg" />
 					</div>
 				</section>
 			</main>
