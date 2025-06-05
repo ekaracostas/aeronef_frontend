@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { sanity } from "../../../sanityClient";
 import Header from "../../components/Header";
 import AlbumCard from "../../components/AlbumCard";
 import Footer from "../../components/Footer";
@@ -12,18 +11,17 @@ export default function ReferencesPage() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const data = await sanity.fetch(`*[_type == "album"]{
-          _id,
-          "coverUrl": cover.asset->url,
-          alt,
-          link,
-        }`);
-        console.log(data);
+        const res = await fetch("/api/albums");
+        if (!res.ok) throw new Error("Erreur API");
+
+        const data = await res.json();
+        console.log("Données récupérées depuis API locale:", data);
         setAlbumsData(data);
       } catch (error) {
-        console.error("Erreur fetch Sanity:", error);
+        console.error("Erreur fetch API locale:", error);
       }
     }
+
     fetchData();
   }, []);
 
