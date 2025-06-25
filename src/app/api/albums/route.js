@@ -7,6 +7,7 @@ export async function GET() {
       "coverUrl": cover.asset->url,
       "alt": cover.alt,
       link,
+			hoverText
     }`);
 
     return new Response(JSON.stringify(data), {

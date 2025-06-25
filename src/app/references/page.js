@@ -8,6 +8,7 @@ import Footer from "../../components/Footer";
 export default function ReferencesPage() {
   const [albumsData, setAlbumsData] = useState([]);
 
+  //Récupération des données d'albums
   useEffect(() => {
     async function fetchData() {
       try {
@@ -28,8 +29,8 @@ export default function ReferencesPage() {
   return (
     <div>
       <Header />
-      {albumsData.map(({ _id, coverUrl, alt, link }) => (
-        <AlbumCard key={_id} coverUrl={coverUrl} alt={alt} link={link} />
+      {albumsData.map(({ _id, coverUrl, alt, link, hoverText }) => (
+        <AlbumCard key={_id} coverUrl={coverUrl} alt={alt} link={link} hoverText={hoverText}/>
       ))}
       <Footer />
     </div>
