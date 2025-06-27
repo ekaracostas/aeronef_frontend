@@ -4,6 +4,7 @@ export async function GET() {
   try {
     const data = await sanity.fetch(`*[_type == "album"]{
       _id,
+      createdOn,
       "coverUrl": cover.asset->url,
       "alt": cover.alt,
       link,

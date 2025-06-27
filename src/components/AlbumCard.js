@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function AlbumCard({ coverUrl, alt, link, hoverText }) {
+export default function AlbumCard({ hoverText, link, coverUrl, alt }) {
   return (
     <main className="flex flex-col items-center justify-center">
       <section className="flex flex-row justify-center w-full max-w-lg mt-1 py-6 ">
