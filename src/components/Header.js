@@ -7,9 +7,9 @@ import { Bars3Icon } from "@heroicons/react/20/solid";
 
 export default function Header() {
   return (
-    <header className="bg-white border-b border-gray-200 shadow-sm">
+    <header className="bg-white border-b border-gray-300 shadow-sm">
       <div className="max-w-7xl mx-auto flex flex-row justify-between items-center py-6 px-4">
-        <Link href="/" className="text-4xl font-bold tracking-widest text-gray-900">
+        <Link href="/" className="text-4xl font-bold tracking-widest text-black">
           AERONEF
         </Link>
 

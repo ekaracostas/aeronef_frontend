@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function EspacePage() {
 	return (
-		<div className="bg-white text-gray-800 font-sans min-h-screen flex flex-col pb-20">
+		<div className="bg-[#fbfbf2] text-gray-800 font-sans min-h-screen flex flex-col pb-20">
 			<Header />
 			<main className="flex-grow max-w-4xl mx-auto px-6 py-12 space-y-10">
 				<section className="space-y-4 text-center">
