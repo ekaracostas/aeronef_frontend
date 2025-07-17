@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+// Encart albums pour la page Références
 export default function AlbumCard({ hoverText, link, coverUrl, alt }) {
   return (
     <main className="flex flex-col items-center justify-center">
