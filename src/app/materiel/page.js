@@ -53,7 +53,6 @@ export default function MaterielPage() {
               <ul className="list-disc list-inside space-y-1 text-lg">
                 <li>Neumann TLM 170 x2</li>
                 <li>Neumann TLM 127 x2</li>
-                <li>AKG C414 x1</li>
                 <li>AKG C414 bxl II x1</li>
                 <li>Sennheiser MKH 40 x2</li>
                 <li>Schoeps CMC6 x2</li>
@@ -98,12 +97,10 @@ export default function MaterielPage() {
           <section>
             <h2 className="text-2xl font-semibold mb-4">Préamplificateurs</h2>
             <ul className="list-disc list-inside space-y-1 text-lg">
-              <li>TubeTech MP2A x2</li>
-              <li>Millennia HV3D x16</li>
-              <li>Avalon M5 x2</li>
+              <li>2 TubeTech MP2A</li>
+              <li>2 Millennia HV3D</li>
+              <li>2 Avalon M5</li>
               <li>Universal Audio 6176</li>
-              <li>TLAudio Ivory x4</li>
-              <li>Nagra x4</li>
             </ul>
           </section>
 
@@ -126,7 +123,7 @@ export default function MaterielPage() {
             <h2 className="text-2xl font-semibold mb-4">Casques</h2>
             <ul className="list-disc list-inside space-y-1 text-lg">
               <li>Sony MD7506 x1</li>
-              <li>Beyer Dynamic DT770 x1</li>
+              <li>Beyer Dynamic DT770 x2</li>
               <li>AKG</li>
               <li>Sennheiser</li>
             </ul>
@@ -135,7 +132,6 @@ export default function MaterielPage() {
         <section aria-label="Galerie photos du matériel du studio" className="flex-grow max-w-4xl mx-auto px-6 py-12 space-y-10">
           <Image src="/images/Neumann.jpg" alt="Photo d'un micro Neumann" width={800} height={500} className="rounded-xl shadow-lg object-cover w-full h-auto mt-10" />
           <Image src="/images/Genelec.jpg" alt="Photo d'une enceinte Genelec" width={800} height={500} className="rounded-xl shadow-lg object-cover w-full h-auto mt-10" />
-          <Image src="/images/Régie.jpg" alt="Photo de la régie côté console" width={800} height={500} className="rounded-xl shadow-lg object-cover w-full h-auto mt-10" />
           <Image src="/images/Régie 2.jpg" alt="Photo de la régie côté canapé" width={800} height={500} className="rounded-xl shadow-lg object-cover w-full h-auto mt-10" />
           <Image src="/images/Tascam DM48000.jpg" alt="Photo de la console" width={800} height={500} className="rounded-xl shadow-lg object-cover w-full h-auto mt-10" />
         </section>
