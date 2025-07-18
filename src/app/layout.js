@@ -1,7 +1,4 @@
 import "./globals.css";
-import { Roboto } from "next/font/google";
-
-const roboto = Roboto({ subsets: ["latin"], variable: "--font-roboto" });
 
 export const metadata = {
   title: "Studio Aeronef",
@@ -13,11 +10,11 @@ export const viewport = "width=device-width, initial-scale=1";
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="fr" className={`${roboto.variable}`}>
+    <html lang="fr">
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body>
+      <body className="font-futura">
         <main>{children}</main>
       </body>
     </html>

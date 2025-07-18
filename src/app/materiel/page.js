@@ -3,139 +3,107 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Image from "next/image";
 
+const GallerySection = ({ images }) => (
+  <div className="flex flex-col gap-6 lg:gap-0 lg:justify-between h-full mb-12">
+    {images.map((img, index) => (
+      <div key={index} className="relative w-full aspect-[4/3] rounded-xl shadow-lg overflow-hidden">
+        <Image src={img.src} alt={img.alt} fill className="object-cover" />
+      </div>
+    ))}
+  </div>
+);
+
+const sections = [
+  {
+    title: "Backline",
+    items: ["Batterie Gretsch 70", "Batterie Sonor", "Piano Yamaha C3", "Rhodes MKII 73 (sur demande)", "Clavia Nordstage 2 73 (sur demande)", "Moog Minitaur (sur demande)"],
+  },
+  {
+    title: "Système d'enregistrement",
+    items: ["Console Tascam DM48000", "Convertisseurs Lynx Aurora 16 et Lynx Aurora 8", "Sommateur Thermionic Culture Fat Bustard II Green Edition", "Sommateur Phoenix Audio Nicerizer Junior", "Egaliseur Millennia NSEQ-2", "Protools 12 (32 in/out)", "Mac Pro quadricoeur 3 GHZ", "Clock Apogee Big Ben", "Patch Bentam"],
+  },
+  {
+    title: "Microphones électrostatiques à lampes",
+    items: ["Neumann U67 x2"],
+  },
+  {
+    title: "Microphones électrostatiques",
+    items: ["Neumann TLM 170 x2", "Neumann TLM 127 x2", "AKG C414 bxl II x1", "Sennheiser MKH 40 x2", "Schoeps CMC6 x2", "Schoeps MK241C x2", "Schoeps M934 x2", "AKG 451 x2", "Calrec CM1050 C x2", "Oktava Mk 012-01 MSP2 x2"],
+  },
+  {
+    title: "Microphones à ruban",
+    items: ["AEA R84", "NoHype LRM 1", "NoHype LRM 2b x2", "NoHype LRM 2 x2"],
+  },
+  {
+    title: "Microphones dynamiques",
+    items: ["Electrovoice RE20 x1", "AKG D12 VR x1", "D112 x1", "AKG D202 x3", "Shure SM57 x3", "Beyerdynamic M69 x1"],
+  },
+  {
+    title: "DI",
+    items: ["Avalon U5 x2"],
+  },
+  {
+    title: "Préamplificateurs",
+    items: ["2 TubeTech MP2A", "2 Millennia HV3D", "2 Avalon M5", "Universal Audio 6176"],
+  },
+  {
+    title: "Monitoring",
+    items: ["Genelec S30", "Yamaha NS10"],
+  },
+  {
+    title: "Retours",
+    items: ["Mixettes Behringer Powerplay pour retours individuels x5"],
+  },
+  {
+    title: "Casques",
+    items: ["Sony MD7506 x1", "Beyer Dynamic DT770 x2", "AKG", "Sennheiser"],
+  },
+];
+
 export default function MaterielPage() {
   return (
     <>
       <Header />
-      <div className="bg-white text-gray-800 font-sans min-h-screen flex flex-col pb-20">
-        <main className="flex-grow max-w-4xl mx-auto px-6 py-12 space-y-10">
+
+      <div className="bg-white text-gray-900 min-h-screen flex flex-col">
+
+        <header className="text-center py-12 px-4">
           <h1 className="text-3xl font-bold mb-8">Matériel du studio</h1>
+        </header>
 
-          <section>
-            <h2 className="text-2xl font-semibold mb-4">Backline</h2>
-            <ul className="list-disc list-inside space-y-1 text-lg">
-              <li>Batterie Gretsch 70</li>
-              <li>Batterie Sonor</li>
-              <li>Piano Yamaha C3</li>
-              <li>Rhodes MKII 73 (sur demande)</li>
-              <li>Clavia Nordstage 2 73 (sur demande)</li>
-              <li>Moog Minitaur (sur demande)</li>
-            </ul>
-          </section>
+        <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 pb-20">
 
-          <section>
-            <h2 className="text-2xl font-semibold mb-4">Système d&apos;enregistrement</h2>
-            <ul className="list-disc list-inside space-y-1 text-lg">
-              <li>Console Tascam DM48000</li>
-              <li>Convertisseurs Lynx Aurora 16 et Lynx Aurora 8</li>
-              <li>Sommateur Thermionic Culture Fat Bustard II Green Edition</li>
-              <li>Sommateur Phoenix Audio Nicerizer Junior</li>
-              <li>Egaliseur Millennia NSEQ-2</li>
-              <li>Protools 12 (32 in/out)</li>
-              <li>Mac Pro quadricoeur 3 GHZ</li>
-              <li>Clock Apogee Big Ben</li>
-              <li>Patch Bentam</li>
-            </ul>
-          </section>
+          {/* Colonne gauche : photos */}
+          <aside className="flex flex-col gap-6">
+            <GallerySection
+              images={[
+                { src: "/images/Neumann.jpg", alt: "Photo d'un micro Neumann" },
+                { src: "/images/Régie 2.jpg", alt: "Photo de la régie côté canapé" },
+                { src: "/images/Genelec.jpg", alt: "Photo d'une enceinte Genelec" },
+                { src: "/images/Tascam DM48000.jpg", alt: "Photo de la console" },
+              ]}
+            />
+          </aside>
 
-          <section>
-            <h2 className="text-2xl font-semibold mb-4">Microphones</h2>
+          {/* Colonne droite : texte */}
+          <article className="space-y-12">
+            {sections.map((section, index) => (
+              <section key={index} className="bg-gray-50 p-6 rounded-xl shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">{section.title}</h2>
+                <ul className="list-disc list-inside space-y-1 text-lg text-gray-700">
+                  {section.items.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              </section>
+            ))}
 
-            <div className="mb-6">
-              <h3 className="text-xl font-medium mb-2">Microphones électrostatiques à lampes</h3>
-              <ul className="list-disc list-inside space-y-1 text-lg">
-                <li>Neumann U67 x2</li>
-              </ul>
-            </div>
+          </article>
 
-            <div className="mb-6">
-              <h3 className="text-xl font-medium mb-2">Microphones électrostatiques</h3>
-              <ul className="list-disc list-inside space-y-1 text-lg">
-                <li>Neumann TLM 170 x2</li>
-                <li>Neumann TLM 127 x2</li>
-                <li>AKG C414 bxl II x1</li>
-                <li>Sennheiser MKH 40 x2</li>
-                <li>Schoeps CMC6 x2</li>
-                <li>Schoeps MK241C x2</li>
-                <li>Schoeps M934 x2</li>
-                <li>AKG 451 x2</li>
-                <li>Calrec CM1050 C x2</li>
-                <li>Oktava Mk 012-01 MSP2 x2</li>
-              </ul>
-            </div>
-
-            <div className="mb-6">
-              <h3 className="text-xl font-medium mb-2">Microphones à ruban</h3>
-              <ul className="list-disc list-inside space-y-1 text-lg">
-                <li>AEA R84</li>
-                <li>NoHype LRM 1</li>
-                <li>NoHype LRM 2b x2</li>
-                <li>NoHype LRM 2 x2</li>
-              </ul>
-            </div>
-
-            <div className="mb-6">
-              <h3 className="text-xl font-medium mb-2">Microphones dynamiques</h3>
-              <ul className="list-disc list-inside space-y-1 text-lg">
-                <li>Electrovoice RE20 x1</li>
-                <li>AKG D12 VR x1</li>
-                <li>D112 x1</li>
-                <li>AKG D202 x3</li>
-                <li>Shure SM57 x3</li>
-                <li>Beyerdynamic M69 x1</li>
-              </ul>
-            </div>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold mb-4">DI</h2>
-            <ul className="list-disc list-inside space-y-1 text-lg">
-              <li>Avalon U5 x2</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold mb-4">Préamplificateurs</h2>
-            <ul className="list-disc list-inside space-y-1 text-lg">
-              <li>2 TubeTech MP2A</li>
-              <li>2 Millennia HV3D</li>
-              <li>2 Avalon M5</li>
-              <li>Universal Audio 6176</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold mb-4">Monitoring</h2>
-            <ul className="list-disc list-inside space-y-1 text-lg">
-              <li>Genelec S30</li>
-              <li>Yamaha NS10</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold mb-4">Retours</h2>
-            <ul className="list-disc list-inside space-y-1 text-lg">
-              <li>Mixettes Behringer Powerplay pour retours individuels x5</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold mb-4">Casques</h2>
-            <ul className="list-disc list-inside space-y-1 text-lg">
-              <li>Sony MD7506 x1</li>
-              <li>Beyer Dynamic DT770 x2</li>
-              <li>AKG</li>
-              <li>Sennheiser</li>
-            </ul>
-          </section>
         </main>
-        <section aria-label="Galerie photos du matériel du studio" className="flex-grow max-w-4xl mx-auto px-6 py-12 space-y-10">
-          <Image src="/images/Neumann.jpg" alt="Photo d'un micro Neumann" width={800} height={500} className="rounded-xl shadow-lg object-cover w-full h-auto mt-10" />
-          <Image src="/images/Genelec.jpg" alt="Photo d'une enceinte Genelec" width={800} height={500} className="rounded-xl shadow-lg object-cover w-full h-auto mt-10" />
-          <Image src="/images/Régie 2.jpg" alt="Photo de la régie côté canapé" width={800} height={500} className="rounded-xl shadow-lg object-cover w-full h-auto mt-10" />
-          <Image src="/images/Tascam DM48000.jpg" alt="Photo de la console" width={800} height={500} className="rounded-xl shadow-lg object-cover w-full h-auto mt-10" />
-        </section>
+
       </div>
+
       <Footer />
     </>
   );
