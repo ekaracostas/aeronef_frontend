@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
+// Photos à afficher dans le carousel
 const images = [
 	{ src: "/images/Neumann.jpg", alt: "Photo d'un micro Neumann" },
 	{ src: "/images/Régie 2.jpg", alt: "Photo de la régie côté canapé" },
@@ -37,6 +38,7 @@ function Carousel() {
 	);
 }
 
+// Liste du matériel
 const sections = [
 	{
 		title: "Backline",
@@ -88,7 +90,7 @@ export default function MaterielPage() {
 	return (
 		<main className="max-w-4xl mx-auto px-6 py-12">
 			<header className="mb-8 text-center">
-				<h1 className="text-4xl font-bold">Matériel</h1>
+				<h1 className="text-3xl font-bold mb-8">Matériel</h1>
 			</header>
 
 			<Carousel />
