@@ -10,6 +10,7 @@ export default function Header() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
+  // Détection du mode mobile en fonction de la taille de l’écran
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 1024);
@@ -20,6 +21,7 @@ export default function Header() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Affichage du header en fonction du scroll
   useEffect(() => {
     if (!isMobile) return;
 
