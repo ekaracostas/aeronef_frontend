@@ -2,7 +2,6 @@
 
 import React from "react";
 import Map from "../../components/Map";
-import GoogleMapsProvider from "@/components/GoogleMapsProvider";
 
 export default function ContactPage() {
 	return (
@@ -28,9 +27,7 @@ export default function ContactPage() {
 				<p>métro : Place des Fêtes, Jourdain ou Gambetta</p>
 				<p>bus : 26 ou 96, arrêt Pyrénées/Ménilmontant</p>
 			</address>
-			<GoogleMapsProvider>
-				<Map />
-			</GoogleMapsProvider>
+			<Map />
 		</div>
 	);
 }
