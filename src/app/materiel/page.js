@@ -28,10 +28,18 @@ function Carousel() {
 			<div className="relative h-72 sm:h-96">
 				<Image src={images[currentIndex].src} alt={images[currentIndex].alt} fill className="object-cover" priority />
 			</div>
-			<button onClick={prev} className="absolute top-1/2 left-3 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white rounded-full p-2 hover:bg-opacity-75" aria-label="Image précédente">
+			<button
+				onClick={prev}
+				className="absolute top-1/2 left-3 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white rounded-full p-2 hover:bg-opacity-75"
+				aria-label="Image précédente"
+			>
 				‹
 			</button>
-			<button onClick={next} className="absolute top-1/2 right-3 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white rounded-full p-2 hover:bg-opacity-75" aria-label="Image suivante">
+			<button
+				onClick={next}
+				className="absolute top-1/2 right-3 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white rounded-full p-2 hover:bg-opacity-75"
+				aria-label="Image suivante"
+			>
 				›
 			</button>
 		</div>
@@ -42,11 +50,28 @@ function Carousel() {
 const sections = [
 	{
 		title: "Backline",
-		items: ["Batterie Gretsch 70", "Batterie Sonor", "Piano Yamaha C3", "Rhodes MKII 73 (sur demande)", "Clavia Nordstage 2 73 (sur demande)", "Moog Minitaur (sur demande)"],
+		items: [
+			"Batterie Gretsch 70",
+			"Batterie Sonor",
+			"Piano Yamaha C3",
+			"Rhodes MKII 73 (sur demande)",
+			"Clavia Nordstage 2 73 (sur demande)",
+			"Moog Minitaur (sur demande)",
+		],
 	},
 	{
 		title: "Système d'enregistrement",
-		items: ["Console Tascam DM48000", "Convertisseurs Lynx Aurora 16 et Lynx Aurora 8", "Sommateur Thermionic Culture Fat Bustard II Green Edition", "Sommateur Phoenix Audio Nicerizer Junior", "Egaliseur Millennia NSEQ-2", "Protools 12 (32 in/out)", "Mac Pro quadricoeur 3 GHZ", "Clock Apogee Big Ben", "Patch Bentam"],
+		items: [
+			"Console Tascam DM48000",
+			"Convertisseurs Lynx Aurora 16 et Lynx Aurora 8",
+			"Sommateur Thermionic Culture Fat Bustard II Green Edition",
+			"Sommateur Phoenix Audio Nicerizer Junior",
+			"Egaliseur Millennia NSEQ-2",
+			"Protools 12 (32 in/out)",
+			"Mac Pro quadricoeur 3 GHZ",
+			"Clock Apogee Big Ben",
+			"Patch Bentam",
+		],
 	},
 	{
 		title: "Microphones électrostatiques à lampes",
@@ -54,7 +79,18 @@ const sections = [
 	},
 	{
 		title: "Microphones électrostatiques",
-		items: ["Neumann TLM 170 x2", "Neumann TLM 127 x2", "AKG C414 bxl II x1", "Sennheiser MKH 40 x2", "Schoeps CMC6 x2", "Schoeps MK241C x2", "Schoeps M934 x2", "AKG 451 x2", "Calrec CM1050 C x2", "Oktava Mk 012-01 MSP2 x2"],
+		items: [
+			"Neumann TLM 170 x2",
+			"Neumann TLM 127 x2",
+			"AKG C414 bxl II x1",
+			"Sennheiser MKH 40 x2",
+			"Schoeps CMC6 x2",
+			"Schoeps MK241C x2",
+			"Schoeps M934 x2",
+			"AKG 451 x2",
+			"Calrec CM1050 C x2",
+			"Oktava Mk 012-01 MSP2 x2",
+		],
 	},
 	{
 		title: "Microphones à ruban",

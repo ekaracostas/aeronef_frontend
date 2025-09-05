@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: "Futura ND";
-  src: url("/fonts/FuturaND-Medium.woff2") format("woff2"),
-       url("/fonts/FuturaND-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
+	font-family: "Futura ND";
+	src: url("/fonts/FuturaND-Medium.woff2") format("woff2"), url("/fonts/FuturaND-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
 }
 
 :root {
-  --font-futura: "Futura ND", sans-serif;
+	--font-futura: "Futura ND", sans-serif;
 }
 
-html, body {
-  font-family: var(--font-futura);
+html,
+body {
+	font-family: var(--font-futura);
 }

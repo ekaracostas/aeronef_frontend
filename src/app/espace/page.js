@@ -60,8 +60,7 @@ export default function EspacePage() {
 			<header className="text-center">
 				<h1 className="text-3xl font-bold mb-8">Espace</h1>
 				<p className="text-lg md:text-xl font-medium">
-					4 cabines isolées de prise de son en lumière du jour (les cabines du bas sont reliées en visioconférence
-					avec celles du haut), une cabine régie.
+					4 cabines isolées de prise de son en lumière du jour (les cabines du bas sont reliées en visioconférence avec celles du haut), une cabine régie.
 				</p>
 			</header>
 
