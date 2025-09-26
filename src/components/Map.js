@@ -1,46 +1,47 @@
 "use client";
 
-import React from "react";
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { Loader } from "@googlemaps/js-api-loader";
 
 export default function Map() {
-	const mapRef = useRef(null);
+  const mapRef = useRef(null);
 
-	// Affichage de la map
-	useEffect(() => {
-		const loader = new Loader({
-			apiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
-			version: "weekly",
-		});
+  useEffect(() => {
+    const loader = new Loader({
+      apiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
+      version: "weekly",
+    });
 
-		loader.load().then(() => {
-			const address = "15 rue Pixérécourt, Paris";
-			const geocoder = new window.google.maps.Geocoder();
+    async function initMap() {
+      const { Map } = await loader.importLibrary("maps");
+      const { AdvancedMarkerElement } = await loader.importLibrary("marker");
 
-			// Géocodage de l'adresse
-			geocoder.geocode({ address }, (results, status) => {
-				if (status === "OK" && results[0]) {
-					const location = results[0].geometry.location;
+      const address = "15 rue Pixérécourt, Paris";
+      const geocoder = new google.maps.Geocoder();
 
-					// Création de la map centrée sur l’adresse
-					const map = new window.google.maps.Map(mapRef.current, {
-						center: location,
-						zoom: 15,
-					});
+      geocoder.geocode({ address }, (results, status) => {
+        if (status === "OK" && results && results.length > 0) {
+          const location = results[0].geometry.location;
 
-					// Ajout d'un marqueur
-					new window.google.maps.Marker({
-						position: location,
-						map,
-						title: address,
-					});
-				} else {
-					console.error("Géocodage échoué :", status);
-				}
-			});
-		});
-	}, []);
+          const map = new Map(mapRef.current, {
+            center: location,
+            zoom: 15,
+			mapId: 'AIzaSyDv4c1l7i5lIOxzZdZHKTVz7u9epiTwTOE',
+          });
 
-	return <div ref={mapRef} className="w-full h-[500px] mt-8" />;
+          new AdvancedMarkerElement({
+            position: location,
+            map,
+            title: address,
+          });
+        } else {
+          console.error("Géocodage échoué :", status, results);
+        }
+      });
+    }
+
+    initMap();
+  }, []);
+
+  return <div ref={mapRef} className="w-full h-[500px] mt-8" />;
 }
